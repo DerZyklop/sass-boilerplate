@@ -1,0 +1,98 @@
+// reusable ui-elements by nils neumann
+
+@mixin multi-col
+
+    // Multi-Column-Elemente
+    .multi-col-50-50
+        +box-sizing(border-box)
+        > .col-1
+            width: 50%
+            float: left
+        > .col-2
+            width: 50%
+            float: right
+
+    .multi-col-30-70
+        +box-sizing(border-box)
+        > .col-1
+            width: 30%
+            float: left
+        > .col-2
+            width: 69%
+            float: right
+    
+    .multi-col-30-30-30
+        +box-sizing(border-box)
+        > .col-1
+            width: 33%
+            float: left
+        > .col-2
+            width: 34%
+            float: left
+        > .col-3
+            width: 33%
+            float: left
+
+@mixin tag
+    a.tag
+        line-height: 2.4em
+        color: $font-color + #777
+        border-color: #eee
+        text-decoration: none
+        background-color: #f9f9f9
+        &:hover
+            text-decoration: none
+            background-color: $tertiary
+            color: $quadrary
+            border-color: $quadrary
+    
+    .tag
+        +transition(0.1s)
+        white-space: nowrap
+        border: 
+            width: 1px
+            style: solid
+            color: $tertiary - #333333
+        +border-radius(16px)
+        padding: 3px 8px
+        margin-right: 6px
+        margin-bottom: 6px
+        text-decoration: none
+        &:hover
+            background-color: $tertiary
+
+@mixin progressbar
+    .progressbar
+        width: 94%
+        border: 2px solid #262626
+        padding: 0 10px
+        display: block
+        text-align: left
+        position: relative
+        overflow: hidden
+        +border-radius($radius*2)
+        color: #fff
+        background-color: #262626
+        +background-image(linear-gradient(#191919, #333))
+        #percent
+            position: absolute
+            left: 0
+            overflow: hidden
+            z-index: 5
+            color: $quadrary
+            +border-radius($radius)
+            background-color: $primary
+            +background-size(30px 30px)
+            width: 20%
+            +transition(background 0.3s)
+        &:hover #percent
+            position: absolute
+            left: 0
+            overflow: hidden
+            z-index: 5
+            color: $quadrary
+            +border-radius($radius)
+            background-color: $tertiary
+        .text
+            padding: 0 10px 0 10px
+            white-space: nowrap
