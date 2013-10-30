@@ -4,8 +4,6 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-
-
     paths:
       assets: 'demo/inc'
       sass: '<%= paths.assets %>/sass'
