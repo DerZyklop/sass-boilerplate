@@ -19,43 +19,43 @@
 
     \:focus
         outline: 0
-    
+
     \::-moz-selection
         background: $primary
         color: $quadrary
-    
+
     \::selection
         background: $primary
         color: $quadrary
-    
+
     html, body
         height: 100%
 
     body
         background: $quadrary
 
-    fieldset 
+    fieldset
         padding: $space-t-b $space-l-r
         margin: $space-t-b 0
-        border: 
+        border:
             color: $tertiary + #222
             style: $border-style
             width: $border-width
-    
+
     // HTML-Elemente [END]
-    
+
     // Standart-Klassen [BEGIN]
-    
+
     .left
         float: left
-    
+
     .right
         float: right
-    
+
     .center
         text-align: center
 
-    p 
+    p, form
         margin: $space-t-b 0
 
     p img
@@ -93,7 +93,7 @@
 
 @mixin typography
     // standard typography elements
-    
+
     body
         font-size: $font-size
         line-height: 1.8em
@@ -103,17 +103,17 @@
         font-family: $font-highlight
         margin: $space-t-b 0
         line-height: 1.4em
-        a 
+        a
             text-decoration: none
             &:hover
                 text-decoration: underline
-    
+
     h1, h2
         color: $primary
-    
+
     h3, h4, h5, h6
         font-weight: normal
-    
+
     h1
         font-size: 2.5em
     h2
@@ -138,7 +138,7 @@
             &:hover
                 text-decoration: underline
 
-    legend 
+    legend
         color: $tertiary - #222
         font-weight: bold
 
@@ -146,16 +146,16 @@
 
     .width-wrap
         max-width: $width-wrap-width
-        margin: 
+        margin:
             left: auto
             right: auto
-    
+
     .inner-width-wrap
         padding: $space-t-b $space-l-r
-    
+
     .main-content img
         max-width: 100%
-    
+
     .page-space
         padding: $space-t-b $space-l-r
 
@@ -165,7 +165,7 @@
         display: block
         +box-sizing(border-box)
         width: 100%
-        border: 
+        border:
             width: $border-width
             style: $border-style
             color: $tertiary
@@ -202,10 +202,10 @@
         padding: 0.4em 1em
         cursor: pointer
         line-height: 1.5em
-        font: 
+        font:
             size: 1em
         color: $quadrary
-        text: 
+        text:
             align: center
             decoration: none
         background: $primary
@@ -216,7 +216,7 @@
             text-decoration: none
             color: $quadrary
             background: $primary - #333
-        a 
+        a
             text-decoration: none
         &:disabled, &.passive
             background: $tertiary - #111
