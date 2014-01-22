@@ -185,16 +185,19 @@
         font-style: italic
 
 @mixin pre
+    code
+        background: $quadrary - #111
+        padding: 0.1em 0.2em
+        +border-radius($radius)
+        // white-space: nowrap
     pre
-        background: $quadrary + #f8f8f8
-        border: $border-width*4 $border-style $border-color
+        background: $quadrary - #111
         padding: 20px
         overflow: scroll
-        +box-shadow( 0px 0px 10px rgba(0,0,0,0.8) inset )
+        +border-radius($radius)
+        > code
+            white-space: pre
         code
+            padding: 0
+            border: none
             background: transparent
-    code
-        +transition(background 0.5s)
-        background: $quadrary + #0a0a0a
-        padding: 0.1em 0.2em
-        +border-radius(4px)
