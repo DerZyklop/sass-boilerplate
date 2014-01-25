@@ -148,22 +148,21 @@
         width: 100%
 
 @mixin button
-    button, .btn, .button, input[type="button"], input[type="submit"], input[type="reset"]
+    button, .button, input[type="button"], input[type="submit"], input[type="reset"]
         display: block
         box-sizing: border-box
         width: 100%
         padding: 0 1em
         cursor: pointer
-        line-height: 2.6rem
-        font:
-            weight: bold
-            size: 1rem
         color: $quadrary
         text:
             align: center
             decoration: none
         background: $secondary
-        border: $border-width solid $secondary - #222
+        border: none
+        line-height: 2em
+        font-size: 1em
+        font-family: $font-main
         +border-radius($radius)
         +transition(0.3s)
         &:hover
@@ -174,7 +173,6 @@
             text-decoration: none
         &:disabled, &.passive
             background: $border-color + #111
-            border: $border-width $border-style $border-color
             cursor: default
 
 @mixin blockquote
