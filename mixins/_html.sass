@@ -121,7 +121,7 @@
     input[type="search"],
     textarea
         display: block
-        +box-sizing(border-box)
+        //+box-sizing(border-box)
         width: 100%
         border:
             width: $border-width
@@ -148,11 +148,15 @@
         width: 100%
 
 @mixin button
-    button, .button, input[type="button"], input[type="submit"], input[type="reset"]
+    button,
+    .button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"]
         display: block
         box-sizing: border-box
         width: 100%
-        padding: 0 1em
+        padding: 0.5em 1em
         cursor: pointer
         color: $quadrary
         text:
@@ -160,7 +164,6 @@
             decoration: none
         background: $secondary
         border: none
-        line-height: 2em
         font-size: 1em
         font-family: $font-main
         +border-radius($radius)
