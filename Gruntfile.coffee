@@ -16,10 +16,20 @@ module.exports = (grunt) ->
     sass:
       all:
         options:
-          compass: true
           style: 'compressed'
           banner: '<%= banner %>'
         files: '<%= paths.css %>/<%= paths.sassfilename %>.min.css': '<%= paths.sass %>/<%= paths.sassfilename %>.sass'
+
+    # autoprefixer
+    autoprefixer:
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.css %>'
+          src: ['*.css']
+          dest: '<%= paths.css %>'
+          ext: '.css'
+        ]
 
 
     watch:
@@ -34,7 +44,7 @@ module.exports = (grunt) ->
 
       sass:
         files: ['<%= paths.sass %>/*.sass']
-        tasks: ['sass']
+        tasks: ['sass', 'autoprefixer']
       css:
         files: ['<%= paths.sass %>/*.css']
         tasks: ['cssmin']
@@ -51,7 +61,6 @@ module.exports = (grunt) ->
     open:
       all:
         path: 'http://<%= php.all.options.hostname %>:<%= php.all.options.port%>'
-
 
 
   grunt.registerTask "reload", "reload Chrome on OS X", ->

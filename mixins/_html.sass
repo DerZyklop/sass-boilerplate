@@ -55,7 +55,7 @@
 @mixin multi-col
     // Multi-Column-Elemente
     .multi-col-50-50
-        +box-sizing(border-box)
+        box-sizing: border-box
         .col-1
             width: 50%
             float: left
@@ -64,7 +64,7 @@
             float: right
 
     .multi-col-30-30-30
-        +box-sizing(border-box)
+        box-sizing: border-box
         .col-1
             width: 33%
             float: left
@@ -121,7 +121,6 @@
     input[type="search"],
     textarea
         display: block
-        //+box-sizing(border-box)
         width: 100%
         border:
             width: $border-width
@@ -132,13 +131,13 @@
         padding: 0.3em 2%
         font-size: 1em
         line-height: 1.5em
-        +transition(0.2s)
+        transition: 0.2s
         &:disabled
             background: $quadrary - #111
             color: $border-color - #666
         &:focus
             border-color: $border-color - #222
-            +box-shadow(inset 0 0 6px rgba(0,0,0,0.1))
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.1)
             background: $quadrary + #050505
     textarea
         resize: vertical
@@ -166,8 +165,8 @@
         border: none
         font-size: 1em
         font-family: $font-main
-        +border-radius($radius)
-        +transition(0.3s)
+        border-radius: $radius
+        transition: 0.3s
         &:hover
             text-decoration: none
             color: $quadrary
@@ -189,13 +188,13 @@
     code
         background: $quadrary - #111
         padding: 0.1em 0.2em
-        +border-radius($radius)
+        border-radius: $radius
         // white-space: nowrap
     pre
         background: $quadrary - #111
         padding: 20px
         overflow: scroll
-        +border-radius($radius)
+        border-radius: $radius
         > code
             white-space: pre
         code
