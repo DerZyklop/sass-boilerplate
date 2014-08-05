@@ -1,7 +1,5 @@
 # sass-boilerplate
 
----
-
 This is my personal boilerplate for sass-files.
 
 ### Install
