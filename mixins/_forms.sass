@@ -30,25 +30,32 @@ textarea
 
 /* Inputs [END] */
 
-/* Inputs Disabled [BEGIN] */
+/* Inputs Disabled || Read-Only [BEGIN] */
 
 input,
 textarea
+    &[readonly],
     &:disabled
         background: $quadrary - #111
         color: $border-color - #666
 
-/* Inputs Disabled [END] */
+/* Inputs Disabled || Read-Only [END] */
 
-/* Inputs Disabled [BEGIN] */
 
-input,
-textarea
-    &:disabled
-        background: $quadrary - #111
-        color: $border-color - #666
 
-/* Inputs Disabled [END] */
+
+
+
+//////////////////
+
+
+
+
+
+
+
+
+
 
 textarea
     resize: vertical
