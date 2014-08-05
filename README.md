@@ -1,6 +1,7 @@
 # sass-boilerplate
 
 This is my personal boilerplate for sass-files.
+Dev-environment: https://github.com/DerZyklop/ui-pattern
 
 ### Install
 
