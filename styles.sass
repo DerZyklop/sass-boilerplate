@@ -1,15 +1,18 @@
+/*! ui-pattern - v1.0.0 - 2014-08-06 */
 // Set the variables if not allready set.
 $page-width: 1200px                    !default
-$space-t-b: 2rem                       !default
-$space-l-r: 4rem                       !default
+$space-t-b: 1rem                       !default
+$space-l-r: 2rem                       !default
 $font-std: 'Droid Sans', helvetica     !default
 $font-highlight: Merriweather, helvetica   !default
 $font-size: 16px                       !default
 $font-color: #222                      !default
 $border-style: solid                   !default
-$border-width: 1px                     !default
+$border-width: 2px                     !default
 $border-color: #ddd                    !default
 $radius: 6px                           !default
+
+/* Colors [BEGIN] */
 
 // A signal-color
 $primary: #900                         !default
@@ -25,8 +28,15 @@ $tertiary: #999                        !default
 // It's used für e.g. the body-background, and labels of colored buttons.
 $quadrary: #fefefe                     !default
 
+/* Colors [END] */
 
+/* Fonts [BEGIN] */
 
+body
+  font-family: $font-std
+  font-size: $font-size
+
+/* Fonts [END] */
 
 /* Reset [BEGIN] */
 
@@ -38,9 +48,41 @@ $quadrary: #fefefe                     !default
 
 /* Reset [END] */
 
+/* Selected Text [BEGIN] */
 
+\::-moz-selection
+  background: $primary
+  color: $quadrary
 
+\::selection
+  background: $primary
+  color: $quadrary
 
+/* Selected Text [END] */
+
+/* Headlines [BEGIN] */
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-highlight
+
+/* Headlines [END] */
+
+/* Paragraph [BEGIN] */
+
+p
+  line-height: 1.6em
+
+/* Paragraph [END] */
+
+/* Links [BEGIN] */
+
+a
+  color: $primary
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+/* Links [END] */
 
 /* Code & Pre [BEGIN] */
 
@@ -64,57 +106,6 @@ pre
 
 /* Code & Pre [END] */
 
-
-/* Figure [BEGIN] */
-
-img
-  max-width: 100%
-
-/* Figure [END] */
-
-
-
-
-
-/* Fonts [BEGIN] */
-
-.font-std
-  font-family: $font-std
-
-.font-highlight
-  font-family: $font-highlight
-
-body
-  font-family: $font-std
-  font-size: $font-size
-
-
-/* Fonts [END] */
-
-/* Links [BEGIN] */
-
-a
-  color: $primary
-  text-decoration: none
-  &:hover
-    text-decoration: underline
-
-/* Links [END] */
-
-/* Headlines [BEGIN] */
-
-h1, h2, h3, h4, h5, h6
-  font-family: $font-highlight
-
-/* Headlines [END] */
-
-/* Paragraph [BEGIN] */
-
-p
-  line-height: 1.6em
-
-/* Paragraph [END] */
-
 /* Blockquote [BEGIN] */
 
 blockquote
@@ -127,7 +118,8 @@ blockquote
 
 /* Figure [BEGIN] */
 
-
+img
+  max-width: 100%
 
 /* Figure [END] */
 
@@ -140,11 +132,6 @@ hr
 
 /* HR [END] */
 
-/* Definition-List [BEGIN] */
-
-
-
-/* Definition-List [END] */
 
 /* Unordered List [BEGIN] */
 
@@ -161,6 +148,7 @@ ol
     padding: 0.2em 0
 
 /* Ordered List [END] */
+
 
 /* Labels [BEGIN] */
 
@@ -215,7 +203,7 @@ textarea
 /* Fieldset [BEGIN] */
 
 fieldset
-  padding: $space-t-b $space-l-r
+  padding: $space-l-r
   border:
     color: $border-color
     style: $border-style
@@ -231,25 +219,41 @@ fieldset
 
 
 
+/* Radio-Buttons [BEGIN] */
+
+input[type="radio"]
+
+/* Radio-Buttons [END] */
 
 
 
 
 
+/* HTML5 Inputs [BEGIN] */
+
+input[type="color"]
+  min-height: 3em
+  padding: 0
+
+/* HTML5 Inputs [END] */
 
 
 
 
+/* Search-Input [BEGIN] */
+
+input[type="search"]
+  border-radius: 2em
+
+/* Search-Input [END] */
 
 
+/* Fields [BEGIN] */
 
+.field
+  margin-bottom: $space-t-b
 
-
-
-
-
-
-
+/* Fields [END] */
 
 /* Table [BEGIN] */
 
@@ -259,11 +263,6 @@ table
     text-align: left
 
 /* Table [END] */
-
-
-
-
-
 
 
 
